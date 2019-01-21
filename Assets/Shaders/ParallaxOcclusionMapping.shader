@@ -81,7 +81,7 @@ Shader "Custom/ParallaxOcclusionMapping"
 					
 					objHeight = tex2D(_HeightMap, uv).r;
 					objHeight = objHeight * _HeightScale - _HeightScale;
-					rayHeight = rayPos.y;
+					rayHeight = rayPos.y - rayPosStart.y;
 				}
 				
 				// Parallax Occlusion Mapping(高さ情報を元に2点間の線形補間する)
